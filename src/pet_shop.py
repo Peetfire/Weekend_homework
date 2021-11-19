@@ -1,5 +1,5 @@
 # WRITE YOUR FUNCTIONS HERE
-
+import pdb
 # Ex 1
 # Returns the value of 'name' from the pet_shop from data structure
 def get_pet_shop_name(pet_shop):
@@ -48,6 +48,7 @@ def find_pet_by_name(pet_shop, pet_name):
         if pet["name"] == pet_name:
             return pet
 
+
 # Ex 9 
 # Looks for the pet object with a 'name' value matching the pet_name 
 # string passed in and if present removes it.
@@ -85,8 +86,8 @@ def add_pet_to_customer(customer, pet):
 # Ex 15, 16, 17
 # Tests that the value stored in 'cash' of customer object is greater than or 
 # equal to the value in new_pet 'price' and IF it is returns True, ELSE returns False.
-def customer_can_afford_pet(customer, new_pet):
-    return get_customer_cash(customer) >= new_pet["price"]
+def customer_can_afford_pet(customer, pet):
+    return get_customer_cash(customer) >= pet["price"]
 
 # Ex 18
 # Takes a pet_shop, pet & customer object 
@@ -94,7 +95,8 @@ def customer_can_afford_pet(customer, new_pet):
 # ADD pet to list in customer 'pets' & deduct pet 'price' from customer 'cash'
 # REMOVE pet from pet_shop, ADD 'price' to pet_shop 'cash', ADD 1 to 'pets_sold'
 def sell_pet_to_customer(pet_shop, pet, customer):
-    if customer_can_afford_pet(customer, pet):
+
+    if pet != None and customer_can_afford_pet(customer, pet) :
         add_pet_to_customer(customer, pet)
         remove_customer_cash(customer, pet["price"])
         remove_pet_by_name(pet_shop, pet["name"])
