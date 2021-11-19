@@ -42,9 +42,13 @@ def get_pets_by_breed(pet_shop, breed):
 
 # Ex 8 
 # Returns the pet object from pet_shop data structure, that has a 'name' 
-# value matching the name string passed in.
-def find_pet_by_name(pet_shop, name):
+# value matching the pet_name string passed in.
+def find_pet_by_name(pet_shop, pet_name):
     for pet in pet_shop["pets"]:
-        if pet["name"] == name:
+        if pet["name"] == pet_name:
             return pet
 
+# Ex 9 Looks for the pet object with a 'name' value matching the pet_name 
+# string passed in and if present removes it.
+def remove_pet_by_name(pet_shop, pet_name):
+    pet_shop["pets"].remove(find_pet_by_name(pet_shop, pet_name))
