@@ -59,3 +59,8 @@ def remove_pet_by_name(pet_shop, pet_name):
 # data structure.
 def add_pet_to_stock(pet_shop, new_pet):
     pet_shop["pets"].append(new_pet)
+
+# Ex 11
+# Returns the value stored in 'cash' of the customer object passed in.
+def get_customer_cash(customer):
+    return customer["cash"]
