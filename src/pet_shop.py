@@ -29,3 +29,13 @@ def increase_pets_sold(pet_shop, amount):
 # Counts and returns the number of pets stored in pet_shop data structure
 def get_stock_count(pet_shop):
     return len(pet_shop["pets"])
+
+# Ex 7
+# Returns a list of pets from the pet_shop data structure with a 'breed' 
+# value matching the passed breed string
+def get_pets_by_breed(pet_shop, breed):
+    matching_pets = []
+    for pet in pet_shop["pets"]:
+        if pet["breed"] == breed:
+            matching_pets.append(pet)
+    return matching_pets
