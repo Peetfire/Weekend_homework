@@ -91,7 +91,7 @@ def customer_can_afford_pet(customer, pet):
 
 # Ex 18
 # Takes a pet_shop, pet & customer object 
-# IF customer can afford the pet -> 
+# IF pet exists AND customer can afford the pet -> 
 # ADD pet to list in customer 'pets' & deduct pet 'price' from customer 'cash'
 # REMOVE pet from pet_shop, ADD 'price' to pet_shop 'cash', ADD 1 to 'pets_sold'
 def sell_pet_to_customer(pet_shop, pet, customer):
