@@ -32,10 +32,19 @@ def get_stock_count(pet_shop):
 
 # Ex 7
 # Returns a list of pets from the pet_shop data structure with a 'breed' 
-# value matching the passed breed string
+# value matching the breed string passed in.
 def get_pets_by_breed(pet_shop, breed):
     matching_pets = []
     for pet in pet_shop["pets"]:
         if pet["breed"] == breed:
             matching_pets.append(pet)
     return matching_pets
+
+# Ex 8 
+# Returns the pet object from pet_shop data structure, that has a 'name' 
+# value matching the name string passed in.
+def find_pet_by_name(pet_shop, name):
+    for pet in pet_shop["pets"]:
+        if pet["name"] == name:
+            return pet
+
