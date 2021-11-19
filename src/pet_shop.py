@@ -70,4 +70,14 @@ def get_customer_cash(customer):
 # in the customer object.
 def remove_customer_cash(customer, amount):
     customer["cash"] -= amount
-    
+
+# Ex 13
+# Returns the numbers of pets stored in 'pets' list of the customer object
+# passed in.
+def get_customer_pet_count(customer):
+    return len(customer["pets"])
+
+# Ex 14
+# Appends the new_pet object to the list in 'pets' of the customer object passed in.
+def add_pet_to_customer(customer, pet):
+    customer["pets"].append(pet)
