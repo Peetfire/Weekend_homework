@@ -48,7 +48,14 @@ def find_pet_by_name(pet_shop, pet_name):
         if pet["name"] == pet_name:
             return pet
 
-# Ex 9 Looks for the pet object with a 'name' value matching the pet_name 
+# Ex 9 
+# Looks for the pet object with a 'name' value matching the pet_name 
 # string passed in and if present removes it.
 def remove_pet_by_name(pet_shop, pet_name):
     pet_shop["pets"].remove(find_pet_by_name(pet_shop, pet_name))
+
+# Ex 10 
+# Adds the pet object passed in to the 'pets' list in the pet_shop
+# data structure.
+def add_pet_to_stock(pet_shop, new_pet):
+    pet_shop["pets"].append(new_pet)
