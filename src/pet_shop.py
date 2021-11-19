@@ -81,3 +81,9 @@ def get_customer_pet_count(customer):
 # Appends the new_pet object to the list in 'pets' of the customer object passed in.
 def add_pet_to_customer(customer, pet):
     customer["pets"].append(pet)
+
+# Ex 15
+# Tests that the value stored in 'cash' of customer object is greater than or 
+# equal to the value in new_pet 'price' and IF it is returns True, ELSE returns False.
+def customer_can_afford_pet(customer, new_pet):
+    return get_customer_cash(customer) >= new_pet["price"]
