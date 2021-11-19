@@ -87,3 +87,17 @@ def add_pet_to_customer(customer, pet):
 # equal to the value in new_pet 'price' and IF it is returns True, ELSE returns False.
 def customer_can_afford_pet(customer, new_pet):
     return get_customer_cash(customer) >= new_pet["price"]
+
+# Ex 18
+# Takes a pet_shop, pet & customer object 
+# IF customer can afford the pet -> 
+# ADD pet to list in customer 'pets' & deduct pet 'price' from customer 'cash'
+# REMOVE pet from pet_shop, ADD 'price' to pet_shop 'cash', ADD 1 to 'pets_sold'
+def sell_pet_to_customer(pet_shop, pet, customer):
+    if customer_can_afford_pet(customer, pet):
+        add_pet_to_customer(customer, pet)
+        remove_customer_cash(customer, pet["price"])
+        remove_pet_by_name(pet_shop, pet["name"])
+        add_or_remove_cash(pet_shop, pet["price"])
+        increase_pets_sold(pet_shop, 1)
+
