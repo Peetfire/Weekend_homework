@@ -82,7 +82,7 @@ def get_customer_pet_count(customer):
 def add_pet_to_customer(customer, pet):
     customer["pets"].append(pet)
 
-# Ex 15
+# Ex 15, 16, 17
 # Tests that the value stored in 'cash' of customer object is greater than or 
 # equal to the value in new_pet 'price' and IF it is returns True, ELSE returns False.
 def customer_can_afford_pet(customer, new_pet):
