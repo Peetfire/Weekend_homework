@@ -64,3 +64,10 @@ def add_pet_to_stock(pet_shop, new_pet):
 # Returns the value stored in 'cash' of the customer object passed in.
 def get_customer_cash(customer):
     return customer["cash"]
+
+# Ex 12
+# Subtracts the amount value passed in, from the value stored in 'cash'
+# in the customer object.
+def remove_customer_cash(customer, amount):
+    customer["cash"] -= amount
+    
